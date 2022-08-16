@@ -5,11 +5,11 @@
 import pandas as pd
 
 # to read csv file named "samplee"
-a = pd.read_csv("cm15JUL2022bhav.csv")
+a = pd.read_csv("../data.csv")
 
 # to save as html file
 # named as "Table"
-a.to_html("Table.htm")
+a.to_html("data.html")
 
 # assign it to a
 # variable (string)

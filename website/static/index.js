@@ -1,8 +1,9 @@
-function deleteNote(noteId) {
-  fetch("/delete-note", {
-    method: "POST",
-    body: JSON.stringify({ noteId: noteId }),
-  }).then((_res) => {
-    window.location.href = "/";
-  });
-}
+$(document).ready(function() {
+    var table = $('#dataitems').DataTable( {
+        lengthChange: false,
+        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
+    } );
+
+    table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+} );
