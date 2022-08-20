@@ -12,8 +12,8 @@ def home():
     return render_template("index.html", user=current_user, data=data)
 
 
-@views.route('/home',methods=['GET','POST'])
-@login_required
-def index():
-    data = Data.query.all()
-    return render_template("home.html",user=current_user,data=data)
+# @views.route('/home',methods=['GET','POST'])
+# @login_required
+# def index():
+#     data = Data.query.all()
+#     return render_template("home.html",user=current_user,data=data)
