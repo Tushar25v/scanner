@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+    <br><br/>
+<div class ="container">
+    <div class ="row">
+    <table id="bullish" class="table table-hover table-bordered table-sm" style="width:100%">
+        <thead class="table table-striped">
+        <tr class="sm-primary">
+            <th>Sl NO</th>
+            <th>SYMBOL</th>
+            <th>OPEN</th>
+            <th>HIGH</th>
+            <th>LOW</th>
+            <th>CLOSE</th>
+            <th>LAST</th>
+            <th>PREVCLOSE</th>
+            <th>TOTTRDQTY</th>
+            <th>TOTTRDVAL</th>
+            <th>TOTAL TRADES</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for list in open %}
+            {% if  list.CLOSE   >  list.PREVCLOSE    %}
+                {%  if list.OPEN == list.LOW %}
+                    <tr>
+                        <td>{{ list.id }}</td>
+                        <td>{{ list.SYMBOL }}</td>
+                        <td>{{ list.OPEN }}</td>
+                        <td>{{ list.HIGH }}</td>
+                        <td>{{ list.LOW }}</td>
+                        <td>{{ list.CLOSE }}</td>
+                        <td>{{ list.LAST }}</td>
+                        <td>{{ list.PREVCLOSE }}</td>
+                        <td>{{ list.TOTTRDQTY }}</td>
+                        <td>{{ list.TOTTRDVAL }}</td>
+                        <td>{{ list.TOTALTRADES }}</td>
+                    </tr>
+                 {% endif %}
+            {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
+{% endblock %}

@@ -33,7 +33,11 @@
         <div class="navbar-nav">
           {% if user.is_authenticated %}
           <a class="navbar-brand" href="/">Screener</a>
-          <a class="nav-item nav-link" id="filter" href="/filter">Filter</a>
+          <a class="nav-item nav-link" id="filter" href="/filter/bullish">Bullish</a>
+          <a class="nav-item nav-link" id="filter" href="/filter/bearish">Bearish</a>
+          <a class="nav-item nav-link" id="filter" href="/filter/strong">Strong</a>
+          <a class="nav-item nav-link" id="filter" href="/filter/weak">Weak</a>
+          <a class="nav-item nav-link" id="filter" href="/filter/unchanged">Unchanged</a>
           <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           {% else %}
           <a class="nav-item nav-link" id="login" href="/login">Login</a>
